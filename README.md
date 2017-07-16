@@ -1,16 +1,16 @@
-##Address book project using Symfony.
+## Address book project using Symfony.
 
 ToDO:
 
-#####Address
+##### Address
 * city, street, home number/apartment number
 * related with person one to many
 
-#####Email
+##### Email
 * address and type (home, business address)
 * related with person one to many
 
-#####Groups
+##### Groups
 * generate entity PersonsGroup: name, info_text
 * make relation with Person:
     - in person - privat $group, mappedby=persons , ManyToMany, targetEntity=PersonsGroup
