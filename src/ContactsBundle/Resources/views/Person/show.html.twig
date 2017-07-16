@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+{% block title %}{{ person.name }}{{ person.surname }}{% endblock %}
+{% block body %}
+    <section class="container show-person">
+        <div class="row">
+            <h2>{{ person.name }} {{ person.surname }}</h2>
+        </div>
+        <div class="row">
+            {% for phone in person.phones %}
+                <div class="phone-number">
+                    <a href="tel:{{ phone.number }}">{{ phone.number }} - {{ phone.type }}</a>
+                    <a href="#" class="btn btn-warning">Add</a>
+                    <a href="#" class="btn btn-danger">Remove</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row well">
+            {{ person.description }}
+        </div>
+    </section>
+{% endblock %}
